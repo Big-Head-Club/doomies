@@ -114,7 +114,7 @@ There is no roadmap. Take this and do with it whatever you want.
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE.md` for more information.
 
 ## Contact
 
