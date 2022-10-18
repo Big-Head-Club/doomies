@@ -13,31 +13,47 @@ contract BattleToken is ERC721, Ownable {
     using Strings for uint256;
 
     address battle;
-    string __uriBase;
-    string __uriSuffix;
+    string __aliveUriBase;
+    string __aliveUriSuffix;
+    string __deadUriBase;
+    string __deadUriSuffix;
+    mapping(uint256 => bool) public deadTokens;
 
     constructor(
         string memory _name,
         string memory _symbol,
-        string memory _uriBase,
-        string memory _uriSuffix
+        string memory _aliveUriBase,
+        string memory _aliveUriSuffix,
+        string memory _deadUriBase,
+        string memory _deadUriSuffix
     ) ERC721(_name, _symbol) {
-        __uriBase = _uriBase;
-        __uriSuffix = _uriSuffix;
+        __aliveUriBase = _aliveUriBase;
+        __aliveUriSuffix = _aliveUriSuffix;
+        __deadUriBase = _deadUriBase;
+        __deadUriSuffix = _deadUriSuffix;
     }
 
     //Admin
     function setUriComponents(
-        string calldata _newBase,
-        string calldata _newSuffix
+        string calldata _aliveNewBase,
+        string calldata _aliveNewSuffix,
+        string calldata _deadNewBase,
+        string calldata _deadNewSuffix
     ) public onlyOwner {
-        __uriBase = _newBase;
-        __uriSuffix = _newSuffix;
+        __aliveUriBase = _aliveNewBase;
+        __aliveUriSuffix = _aliveNewSuffix;
+        __deadUriBase = _deadNewBase;
+        __deadUriSuffix = _deadNewSuffix;
     }
 
     function setBattle(address _battle) public {
         require(battle == address(0), "already set");
         battle = _battle;
+    }
+
+    function killDoomie(uint256 tokenId) public {
+      require(msg.sender == battle, "permission");
+      deadTokens[tokenId] = true;
     }
 
     function mint(address to, uint256 tokenId) public {
@@ -52,10 +68,10 @@ contract BattleToken is ERC721, Ownable {
         returns (string memory)
     {
         require(_exists(_tokenId), "exists");
-        return
-            string(
-                abi.encodePacked(__uriBase, _tokenId.toString(), __uriSuffix)
-            );
+        if (deadTokens[_tokenId]) {
+          return string(abi.encodePacked(__deadUriBase, _tokenId.toString(), __deadUriSuffix));
+        }
+        return string(abi.encodePacked(__aliveUriBase, _tokenId.toString(), __aliveUriSuffix));
     }
 
 

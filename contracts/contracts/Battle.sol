@@ -230,8 +230,9 @@ contract Battle is Ownable {
         int8 dx,
         int8 dy
     ) public {
+        IBattleToken tok = IBattleToken(token);
         require(gasleft() > 200000, "gas failsafe");
-        require(IBattleToken(token).ownerOf(tokenId) == msg.sender, "owner");
+        require(tok.ownerOf(tokenId) == msg.sender, "owner");
 
         require(gameIsActive(), "game not active");
         require(turnNumber() != 0, "still entry time");
@@ -300,6 +301,7 @@ contract Battle is Ownable {
             } else {
                 //enemy wins
                 pieces[tokenId].data = type(uint32).max;
+                tok.killDoomie(tokenId);
 
                 ++pieces[target].data2;
             }

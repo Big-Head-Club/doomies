@@ -1,5 +1,6 @@
 [
   "function burn(uint256)",
+  "function killDoomie(uint256)",
   "function mint(address,uint256)",
   "function ownerOf(uint256) view returns (address)"
 ]
