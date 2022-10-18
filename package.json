@@ -13,6 +13,6 @@
     "lint:client": "cd client && yarn test"
   },
   "devDependencies": {
-    "husky": "^8.0.1"
+    "husky": "8.0.1"
   }
 }
