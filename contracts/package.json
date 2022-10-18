@@ -38,7 +38,6 @@
     "dev:play:half": "./scripts/playHalfWay.sh",
     "dev:play:end": "./scripts/playNearEnd.sh"
   },
-  "license": "ISC",
   "dependencies": {
     "@chainlink/contracts": "0.4.1",
     "@openzeppelin/contracts": "4.7.3"
