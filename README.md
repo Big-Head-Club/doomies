@@ -126,16 +126,6 @@ Big Head Club - [@bigheadhq](https://twitter.com/bigheadhq) - officialstuff@bigh
 * [w1nt3r-eth](https://twitter.com/w1nt3r_eth)
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Big-Head-Club/bhc-dom-strategy-game.svg?style=for-the-badge
-[contributors-url]: https://github.com/Big-Head-Club/bhc-dom-strategy-game/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Big-Head-Club/bhc-dom-strategy-game.svg?style=for-the-badge
-[forks-url]: https://github.com/Big-Head-Club/bhc-dom-strategy-game/network/members
-[stars-shield]: https://img.shields.io/github/stars/Big-Head-Club/bhc-dom-strategy-game.svg?style=for-the-badge
-[stars-url]: https://github.com/Big-Head-Club/bhc-dom-strategy-game/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Big-Head-Club/bhc-dom-strategy-game.svg?style=for-the-badge
-[issues-url]: https://github.com/Big-Head-Club/bhc-dom-strategy-game/issues
-[license-shield]: https://img.shields.io/github/license/Big-Head-Club/bhc-dom-strategy-game.svg?style=for-the-badge
-[license-url]: https://github.com/Big-Head-Club/bhc-dom-strategy-game/blob/master/LICENSE.txt
 [product-screenshot]: assets/doomies.png
 [hardhat-url]: https://hardhat.org/
 [ganache-url]: https://trufflesuite.com/ganache/
