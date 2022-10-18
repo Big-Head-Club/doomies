@@ -10,7 +10,7 @@
     ·
     <a href="https://game.doomies.xyz">Play</a>
     ·
-    <a href="https://github.com/Big-Head-Club/bhc-dom-strategy-game/issues">Report Bug</a>
+    <a href="https://github.com/Big-Head-Club/doomies/issues">Report Bug</a>
     <hr />
   </p>
 </div>
