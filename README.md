@@ -56,6 +56,7 @@ Since Doomies was built in a hackathon, take note that it does have many rough e
 * [Vite][vite-url]
 * [Wagmi][wagmi-url]
 * [Connectkit][connectkit-url]
+* [TailwindUI][tailwind-url]
 
 ## Development
 
@@ -134,3 +135,4 @@ Big Head Club - [@bigheadhq](https://twitter.com/bigheadhq) - officialstuff@bigh
 [vite-url]: https://vitejs.dev/
 [wagmi-url]: https://wagmi.sh/ 
 [connectkit-url]: https://docs.family.co/connectkit
+[tailwind-url]: https://tailwindui.com/
