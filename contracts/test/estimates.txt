@@ -1,0 +1,30 @@
+  Big Head Battle
+    GasEstimates
+      √ Mint token (685ms)
+min: 170529
+max: 187629
+avg: 176799
+      √ Enter game (443ms)
+min: 78998
+max: 79079
+avg: 79035
+      √ Move, no other action (552ms)
+min: 85631
+max: 85984
+avg: 85772
+      √ Move, pick up first weapon (1058ms)
+min: 70973
+max: 147548
+avg: 102534
+      √ Move, pick up subsequent weapon (820ms)
+min: 70954
+max: 71345
+avg: 71149
+      √ Move, battle (win) (1933ms)
+min: 147558
+max: 149327
+avg: 148442
+      √ Move, battle (lose) (1991ms)
+min: 138962
+max: 142073
+avg: 140517

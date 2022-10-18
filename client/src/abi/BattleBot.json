@@ -1,0 +1,6 @@
+[
+  "constructor(address)",
+  "function enterGame(int8,int8) payable",
+  "function mint() payable",
+  "function move(uint32,int8,int8)"
+]

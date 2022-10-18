@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  .game {
+    height: calc(100vh - theme('spacing.12'));
+  }
+
+  @media screen(md) {
+    .game {
+      height: calc(100vh - theme('spacing.24'));
+    }
+  }
+}
+
+#root {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  background: black;
+  color: #DCDABC;
+  font-family: 'Barlow', sans-serif;
+}

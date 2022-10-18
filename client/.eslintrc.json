@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "xo",
+    "xo-typescript",
+    "xo-react"
+  ],
+  "rules": {
+    "no-eq-null": 0,
+    "eqeqeq": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/semi": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
+    "react/react-in-jsx-scope": 0,
+    "indent": [
+      "error",
+      2
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}

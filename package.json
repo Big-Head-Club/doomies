@@ -1,0 +1,16 @@
+{
+  "name": "doomies",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "@doomies/contracts",
+    "@doomies/client"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "lint:client": "cd client && yarn test"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1"
+  }
+}
