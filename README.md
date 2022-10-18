@@ -10,7 +10,7 @@
     ·
     <a href="https://game.doomies.xyz">Play</a>
     ·
-    <a href="https://github.com/Big-Head-Club/bhc-dom-strategy-game/issues">Report Bug</a>
+    <a href="https://github.com/Big-Head-Club/doomies/issues">Report Bug</a>
     <hr />
   </p>
 </div>
@@ -114,7 +114,7 @@ There is no roadmap. Take this and do with it whatever you want.
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE.md` for more information.
 
 ## Contact
 
