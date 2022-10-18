@@ -62,6 +62,7 @@ Since Doomies was built in a hackathon, take note that it does have many rough e
 This repo contains three folders:
 1. `contracts` is where the contracts, hardhat config and tests live
 2. `client` is the web2 frontend
+3. `assets` contains images we use in this README, you can just ignore it
 
 Since this is a Yarn workspace, you can run `yarn install` in the project's root and you'll have all the dependencies you need for both `contracts` and `client` - this may take a while though.
 After that, follow the steps below to hack on our contracts or client.
