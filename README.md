@@ -60,23 +60,26 @@ Since Doomies was built in a hackathon, take note that it does have many rough e
 
 ## Development
 
-This repo contains three folders:
-1. `contracts` is where the contracts, hardhat config and tests live
-2. `client` is the web2 frontend
-3. `assets` contains images we use in this README, you can just ignore it
+1. `$ git clone https://github.com/Big-Head-Club/doomies.git`
+2. `$ cd doomies`
+3. `$ yarn install`
 
-Since this is a Yarn workspace, you can run `yarn install` in the project's root and you'll have all the dependencies you need for both `contracts` and `client` - this may take a while though.
-After that, follow the steps below to hack on our contracts or client.
+This repo contains three folders:
+* `contracts` is where the Solidity smart contracts, hardhat config, and smart contract tests live
+* `client` is the web frontend
+* `assets` contains images we use in this README
+
+This codebase makes use of Yarn workspaces so the single call to `yarn install` will install all dependencies including those in `contracts` and `client`.
+After successfull installation, follow the steps below to hack on our contracts or client.
 
 ### Contracts
-0. Run `yarn install` in the repo's root.
-1. In the `contracts` directory, copy `.env.template` and create a `.env` file.
+1. In the `contracts` directory, copy `.env.template` and create your own `.env` file.
 ```sh 
 cd contracts 
 cp .env.template .env
 ```
 3. Fill those in, and choose the network you will use for development. We use `ganache`.
-4. Run a local chain. You can use whatever you want, just remember to adjust the `hardhat.config.js` file accordingly. To use the project's ganache dependency, just run 
+4. Run a local EVM blockchain. You can use whatever you want, just remember to adjust the `hardhat.config.js` file accordingly. To use the projects ganache dependency, run 
 ```sh 
 yarn ganache
 ```
@@ -96,7 +99,6 @@ If you make changes to the contracts, just run `yarn compile` and that will comp
 
 ### Client
 
-0. Run `yarn install` in the repo's root.
 1. In the `client` directory, copy `.env.template` and create a `.env` file.
 ```sh
 cd client 

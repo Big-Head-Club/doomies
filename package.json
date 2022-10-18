@@ -2,9 +2,11 @@
   "name": "doomies",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
+  "author": "Big Head Club Ltd.",
   "workspaces": [
-    "@doomies/contracts",
-    "@doomies/client"
+    "contracts",
+    "client"
   ],
   "scripts": {
     "prepare": "husky install",
