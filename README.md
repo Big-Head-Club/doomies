@@ -74,22 +74,22 @@ After successfull installation, follow the steps below to hack on our contracts 
 
 ### Contracts
 1. In the `contracts` directory, copy `.env.template` and create your own `.env` file.
-```sh 
-cd contracts 
-cp .env.template .env
+``` 
+$ cd contracts 
+$ cp .env.template .env
 ```
 3. Fill those in, and choose the network you will use for development. We use `ganache`.
 4. Run a local EVM blockchain. You can use whatever you want, just remember to adjust the `hardhat.config.js` file accordingly. To use the projects ganache dependency, run 
-```sh 
-yarn ganache
+``` 
+$ yarn ganache
 ```
 5. Deploy the contracts.
-```sh 
-yarn deploy:ganache
+``` 
+$ yarn deploy:ganache
 ```
 6. Start a game.
-```sh 
-yarn dev:start-game:ganache
+```
+$ yarn dev:start-game:ganache
 ```
 7. At this point, you can mint doomies, join the game and have fun!
 
@@ -100,14 +100,14 @@ If you make changes to the contracts, just run `yarn compile` and that will comp
 ### Client
 
 1. In the `client` directory, copy `.env.template` and create a `.env` file.
-```sh
-cd client 
-cp .env.template .env
+```
+$ cd client 
+$ cp .env.template .env
 ```
 2. Fill in your alchemy ID if you want, and the contract addresses. You can grab those at `contracts/addresses.json` (that json is generated when the contracts are compiled).
 3. Run a development version with
-```sh
-yarn dev
+```
+$ yarn dev
 ```
 4. (Optional) To get through all the different game stages, you'll need to follow the steps above and deploy contracts locally. Turns take 24 hours, so `yarn dev:next-turn:ganache` was written to speed things up.
 
