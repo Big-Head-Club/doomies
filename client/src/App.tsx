@@ -15,13 +15,13 @@ const NETWORK_CHAIN = import.meta.env.VITE_NETWORK_CHAIN as Chains
 
 debug('NETWORK_CHAIN', NETWORK_CHAIN)
 
-type Chains = 'hardhat' | 'localhost' | 'goerli' | 'mainnet' | 'tunnel'
+type Chains = 'hardhat' | 'localhost' | 'mumbai' | 'polygon' | 'tunnel'
 
 const chainsByName: Record<Chains, Chain[]> = {
   hardhat: [chain.hardhat],
   localhost: [chain.localhost],
-  goerli: [chain.goerli],
-  mainnet: [chain.mainnet],
+  mumbai: [chain.polygonMumbai],
+  polygon: [chain.polygon],
   tunnel: [{
     id: 1337,
     name: 'Tunnel',

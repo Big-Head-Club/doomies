@@ -134,7 +134,7 @@ async function main() {
   await BattleViewer.deployed();
   // totalGasUsed += parseInt(tx.deployTransaction.gasLimit);
 
-  const viewerTxHash = Battle.deployTransaction.hash;
+  const viewerTxHash = BattleViewer.deployTransaction.hash;
   const viewerTxReceipt = await ethers.provider.waitForTransaction(viewerTxHash);
 
   col.green("    done.");
