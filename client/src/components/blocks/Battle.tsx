@@ -18,8 +18,8 @@ export default function BattleBlock({battleIndex, isFresh, onClose}: BattleBlock
   const battle = battleLogs[battleIndex]
   const player1 = pieces ? pieces[battle.player1] : undefined
   const player2 = pieces ? pieces[battle.player2] : undefined
-  const player1rolls = battle.rolls1.map(Number)
-  const player2rolls = battle.rolls2.map(Number)
+  const player1rolls = battle?.rolls1.map(Number)
+  const player2rolls = battle?.rolls2.map(Number)
 
   const playerWonRoll = (stat1: number, roll1: number, stat2: number, roll2: number) =>
     stat1 === 0
