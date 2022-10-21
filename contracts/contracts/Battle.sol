@@ -74,7 +74,7 @@ contract Battle is Ownable {
         uint256 amount
     );
 
-    uint256 public turnTime = 1 minutes;
+    uint256 public turnTime = 5 minutes;
     address token;
     address dice;
     uint32 ownerWithdrawn;
@@ -159,7 +159,7 @@ contract Battle is Ownable {
         );
 
         if (games[game].players == 16) {
-            games[game].startTime = uint32(block.timestamp - 1 minutes);
+            games[game].startTime = uint32(block.timestamp - 5 minutes);
         }
     }
 
