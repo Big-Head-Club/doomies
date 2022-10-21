@@ -1,6 +1,9 @@
 {
   "name": "@doomies/contracts",
   "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Big Head Club Ltd.",
   "scripts": {
     "ganache": "ganache -m 'lunch seek bag mutual summer battle short picnic umbrella become mandate together'",
     "hardhat": "npx hardhat node",
