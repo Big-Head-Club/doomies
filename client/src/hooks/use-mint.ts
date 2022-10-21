@@ -10,7 +10,7 @@ export const useMint = () => {
     contractInterface: Battle,
     functionName: 'mint',
     overrides: {
-      value: ethers.utils.parseEther('0.08'), // @TODO: Move to environment variable
+      value: ethers.utils.parseEther('0.0005'), // @TODO: Move to environment variable
     },
   })
 
