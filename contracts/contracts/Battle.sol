@@ -159,7 +159,7 @@ contract Battle is Ownable {
         );
 
         if (games[game].players == 16) {
-            games[game].startTime = uint32(block.timestamp - 1 days);
+            games[game].startTime = uint32(block.timestamp - turnTime);
         }
     }
 
