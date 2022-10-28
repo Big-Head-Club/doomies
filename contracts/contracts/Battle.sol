@@ -74,7 +74,7 @@ contract Battle is Ownable {
         uint256 amount
     );
 
-    uint256 public turnTime = 5 minutes;
+    uint256 public turnTime = 1 days;
     address token;
     address dice;
     uint32 ownerWithdrawn;
