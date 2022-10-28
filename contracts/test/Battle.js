@@ -54,7 +54,7 @@ const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 const UINT32_MAX = 4294967295n;
 
-const FEE_ENTRY     = BigInt(ethers.utils.parseEther("0.08"));
+const FEE_ENTRY     = BigInt(ethers.utils.parseEther("0"));
 const PERCENT_OWNER = 51n;
 const TOKEN_MAX     = 800n;
 
@@ -557,7 +557,7 @@ describe("Big Head Battle", async()=>{
                 await fails(async()=> {
                     await battle.mint(FEE_ENTRY + 1n);
                 });
-                await fails(async()=> {
+                await succeeds(async()=> {
                     await battle.mint(0n);
                 });
             });
