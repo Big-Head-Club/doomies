@@ -30,7 +30,7 @@ struct Game {
     mapping(int8 => mapping(int8 => uint32)) board; // board game
 }
 
-uint256 constant FEE_ENTRY = 0.0005 ether;
+uint256 constant FEE_ENTRY = 0 ether;
 uint256 constant STALEMATE_TURNS = 6;
 uint256 constant PERCENT_OWNER = 51;
 uint32 constant TOKEN_MAX = 800;
