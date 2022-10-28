@@ -14,4 +14,4 @@ export const CLOSE = 'close'
 export const PLAYER = 'player'
 export const WEAPON = 'weapon'
 export const MAXTOKENS = 800
-export const IPFS_URI_SUFFIX: string = 'https://ipfs.io/ipfs/'
+export const S3_SUFFIX: string = 'https://doomies-img-public.s3.us-east-2.amazonaws.com/doomies/'

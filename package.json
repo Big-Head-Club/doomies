@@ -9,7 +9,6 @@
     "client"
   ],
   "scripts": {
-    "prepare": "husky install",
     "lint:client": "cd client && yarn test"
   },
   "devDependencies": {

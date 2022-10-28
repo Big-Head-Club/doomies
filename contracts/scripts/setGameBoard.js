@@ -2,8 +2,8 @@ const fs = require("fs");
 const col = require("../console.colour");
 const log = col.colour;
 
-// 0.08 ethers
-const FEE_ENTRY = 80000000000000000n;
+// For for y'all
+const FEE_ENTRY = 0n;
 
 let addresses = {};
 const addressFile = __dirname + "/../addresses.json";

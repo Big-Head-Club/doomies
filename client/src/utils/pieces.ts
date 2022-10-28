@@ -1,4 +1,4 @@
-import {PLAYER, WEAPON, MAXTOKENS, IPFS_URI_SUFFIX} from './constants'
+import {PLAYER, WEAPON, MAXTOKENS, S3_SUFFIX} from './constants'
 import {debug} from './debug'
 import type {RawStats, StatsRecord} from './stats'
 import {parseRawStats} from './stats'
@@ -77,9 +77,7 @@ const getPieceName = (id: number) => {
 }
 
 const getDoomieImageUri = (id: number) => {
-  const ipfsImageUri = doomiesMetadata[id].image
-  const ipfsHash = ipfsImageUri.split('ipfs://')
-  return `${IPFS_URI_SUFFIX}${ipfsHash[1]}`
+  return `${S3_SUFFIX}${id}.png`
 }
 
 export const getPieceImage = (id: number, getFullWeapon = true) => {

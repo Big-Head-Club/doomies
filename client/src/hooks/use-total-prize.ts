@@ -97,6 +97,6 @@ export const useTotalPrize = () => {
   }, [contract, setWithdrawals, gameId, isInitialized])
 
   return totalPrizeNum
-    ? totalPrizeNum.toFixed(4).toString() + ' ETH'
-    : '- ETH'
+    ? totalPrizeNum.toFixed(4).toString() + ' MATIC'
+    : ''
 }
