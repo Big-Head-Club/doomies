@@ -10,7 +10,7 @@ const MUMBAI_PRIVATE_KEY = process.env.MUMBAI_PRIVATE_KEY;
 const POLYGON_PRIVATE_KEY = process.env.POLYGON_PRIVATE_KEY;
 const GANACHE_PRIVATE_KEY = process.env.GANACHE_PRIVATE_KEY;
 
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
+const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY;
 
 const HARDHAT_MNEMONIC = process.env.HARDHAT_MNEMONIC
 
@@ -45,7 +45,7 @@ module.exports = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: ETHERSCAN_API_KEY,
+    apiKey: POLYGONSCAN_API_KEY,
   },
   abiExporter: {
     path: "../client/src/abi",
