@@ -369,7 +369,7 @@ contract Battle is Ownable {
     // call this to start the game
     //  can't be called by non contract owner
     //  cant be called if game in progress
-    function startGame() public onlyOwner {
+    function startGame() public {
         require(gasleft() > 1250000, "gas failsafe");
 
         require(!gameIsActive(), "game active");

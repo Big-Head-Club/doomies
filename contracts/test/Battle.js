@@ -493,9 +493,9 @@ describe("Big Head Battle", async()=>{
                     // die();
                 },true)
             });
-            it("Can't startGame if not owner", async()=>{
+            it("Can startGame if not owner", async()=>{
                 account = nonOwner;
-                await fails(async()=>{
+                await succeeds(async()=>{
                     await battle.startGame();
                 })
             });

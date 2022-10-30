@@ -51,7 +51,7 @@ async function main() {
 
     const [deployer] = await ethers.getSigners();
 
-    log("Verifying with Etherscan...");
+    log("Verifying with Polygonscan...");
 
     const battle = addresses[_network].battle;
     const dice   = addresses[_network].dice;
