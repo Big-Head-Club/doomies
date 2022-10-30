@@ -67,16 +67,21 @@ async function main() {
     log("          _uriBase: "+_uriBase);
     log("        _uriSuffix: "+_uriSuffix);
 
-    await hre.run("verify:verify", {
-        address: token,
-        constructorArguments: [
-            _name,
-            _symbol,
-            _uriBase,
-            _uriSuffix
-        ],
-    });
-    log("@green@   done.")
+    try {
+        await hre.run("verify:verify", {
+            address: token,
+            constructorArguments: [
+                _name,
+                _symbol,
+                _uriBase,
+                _uriSuffix
+            ],
+        });
+        log("@green@   done.")
+    }catch(e){
+        col.red("Verification failed.");
+        col.red(e);
+    }
     log("")
 
 
@@ -84,11 +89,16 @@ async function main() {
     log("@cyan@BattleDice:");
     log("   Contract address: "+dice);
 
-    await hre.run("verify:verify", {
-        address: dice,
-        constructorArguments: [],
-    });
-    log("@green@   done.")
+    try {
+        await hre.run("verify:verify", {
+            address: dice,
+            constructorArguments: [],
+        });
+        log("@green@   done.")
+    }catch(e){
+        col.red("Verification failed.");
+        col.red(e);
+    }
     log("")
 
 
@@ -99,14 +109,19 @@ async function main() {
     log("           _token: "+token+"");
     log("            _dice: "+dice+"");
 
-    await hre.run("verify:verify", {
-        address: battle,
-        constructorArguments: [
-            token,
-            dice
-        ],
-    });
-    log("@green@   done.")
+    try{
+        await hre.run("verify:verify", {
+            address: battle,
+            constructorArguments: [
+                token,
+                dice
+            ],
+        });
+        log("@green@   done.")
+    }catch(e){
+        col.red("Verification failed.");
+        col.red(e);
+    }
     log("")
 
 
@@ -117,14 +132,19 @@ async function main() {
     log("          _battle: "+battle+"");
     log("           _token: "+token+"");
 
-    await hre.run("verify:verify", {
-        address: viewer,
-        constructorArguments: [
-            battle,
-            token
-        ],
-    });
-    log("@green@   done.")
+    try{
+        await hre.run("verify:verify", {
+            address: viewer,
+            constructorArguments: [
+                battle,
+                token
+            ],
+        });
+        log("@green@   done.")
+    }catch(e){
+        col.red("Verification failed.");
+        col.red(e);
+    }
     log("")
 
 }
