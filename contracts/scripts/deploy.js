@@ -8,7 +8,7 @@ const log = col.colour;
 
 //TODO: SET A PRICE FOR DEPLOYMENTS
 // const MAINNET_GAS_PRICE = ethers.utils.parseUnits(config.deploy.MAINNET_GAS_PRICE_GWEI,"gwei");
-const PREVENT_MAINNET = true; //config.deploy.PREVENT_MAINNET;
+const PREVENT_MAINNET = config.deploy.PREVENT_MAINNET;
 
 const tokenAddresses = {
   battle: '',
