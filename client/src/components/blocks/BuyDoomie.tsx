@@ -33,8 +33,9 @@ export default function BuyDoomieBlock({onClose}: BuyDoomieBlockProps) {
     }
   }, [isSuccess])
 
+  // @FIXME: Block title should say `mint a doomie` if doomies are available to mint
   return (
-    <Block title={isConnected ? 'mint a doomie' : 'buy a doomie'} onClose={onClose}>
+    <Block title={isConnected ? 'buy a doomie' : 'buy a doomie'} onClose={onClose}>
       {playerTokens?.available && (
         <div className='flex justify-center items-center'>
             You have {playerTokens.available.length} unspent {playerTokens.available.length === 1 ? 'doomie' : 'doomies'}.
@@ -47,6 +48,10 @@ export default function BuyDoomieBlock({onClose}: BuyDoomieBlockProps) {
         {isConnected
           ? (
             <div className='flex gap-x-2'>
+              {/* 
+              
+              // @TODO: Make this better for when the project mints out.
+
               <Button
                 text={isLoading
                   ? 'minting...'
@@ -59,7 +64,7 @@ export default function BuyDoomieBlock({onClose}: BuyDoomieBlockProps) {
                 onClick={() => {
                   mint?.()
                 }}
-              />
+              /> */}
               <Button
                 text='play'
                 isDisabled={!playerTokens?.available.length}
