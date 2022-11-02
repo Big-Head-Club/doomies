@@ -11,7 +11,7 @@ let PREVENT_MAINNET = true;
 let _name_token = "Doomies";
 let _symbol_token = "DOOMIES";
 
-let _uriBase_token = "https://e77al6s9m0.execute-api.us-east-2.amazonaws.com/default/battlegame-metadata-microservice?token=";
+let _uriBase_token = "https://t656nnvp2b.execute-api.us-east-2.amazonaws.com/default/battlegame2-metadata-microservice?token=";
 let _uriSuffix_token = "";
 
 

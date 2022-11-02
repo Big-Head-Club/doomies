@@ -173,7 +173,7 @@ contract Battle is Ownable {
     //      Transfer( 0x0, msg.sender, tokenId)
     // from main contract
     //      event Mint(tokenId, int8[7] stats );
-    function mint() public payable {
+    function mint() public payable onlyOwner{
         require(gasleft() > 200000, "gas failsafe");
 
         require(msg.sender == tx.origin, "no contracts");

@@ -265,6 +265,10 @@ const battle = {
         return BigInt(await Battle.game());
     },
 
+    lastTokenId: async () => {
+        return BigInt(await Battle.lastTokenId());
+    },
+
     games: async (game) => {
         return await Battle.games(game);
     },
@@ -455,7 +459,16 @@ const refresh_contracts = async(setBattle = true)=> {
 }
 
 async function mint(){
-    return await battle.mint(FEE_ENTRY);
+
+    const minter = account;
+    account = owner;
+    let tx =  await battle.mint(FEE_ENTRY);
+    let newId = await battle.lastTokenId();
+    // log(">",newId)
+    await battleToken.transferFrom(owner.address,minter.address,newId);
+    account = minter;
+
+    return tx;
 }
 
 async function enterGame(tokenId, x,y){
@@ -574,6 +587,13 @@ describe("Big Head Battle", async()=>{
                 await mint();
 
                 await battleToken.ownerOf(1);
+            });
+
+            it("Can't mint if not owner",async()=>{
+                await fails(async ()=>{
+                   account = nonOwner;
+                    let tx =  await battle.mint(FEE_ENTRY);
+                });
             });
 
 
