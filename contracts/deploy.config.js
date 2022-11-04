@@ -8,8 +8,8 @@ let PREVENT_MAINNET = true;
 
 
 //Token
-let _name_token = "Doomies";
-let _symbol_token = "DOOMIES";
+let _name_token = "Community Doomies";
+let _symbol_token = "CDOOMIES";
 
 let _uriBase_token = "https://t656nnvp2b.execute-api.us-east-2.amazonaws.com/default/battlegame2-metadata-microservice?token=";
 let _uriSuffix_token = "";
