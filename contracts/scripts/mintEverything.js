@@ -2,6 +2,9 @@ const fs = require("fs");
 const col = require("../console.colour");
 const log = col.colour;
 
+const ethProvider = require('eth-provider') 
+const frame = ethProvider('frame')
+
 // For for y'all
 const FEE_ENTRY = 0n;
 const SUPPLY = 800;
@@ -32,16 +35,21 @@ async function main() {
   log("Using account:", deployer.address);
   log("Account balance:", (await deployer.getBalance()).toString());
 
-  switch (network) {
-    case "ganache":
-    case "ropsten":
-    case "rinkeby":
-    case "hardhat":
-      break;
-    case "mainnet":
-      log("@red@  MAINNET PREVENTED");
-      process.exit();
-  }
+  // switch (_network) {
+  //   case "ganache":
+  //   case "hardhat":
+  //   case "mumbai":
+  //     break;
+  //   // case "goerli":
+  //   //   goerliLimit = true;
+  //   //   break;
+  //   case "polygon":
+  //     if (PREVENT_MAINNET) {
+  //       col.red("  POLYGON MAINNET PREVENTED");
+  //       process.exit();
+  //     }
+  //     break;
+  // }
 
   col.yellow("MINTING ALL THE DOOMIES ...");
   log();
@@ -50,22 +58,6 @@ async function main() {
 
   const BattleFactory = await ethers.getContractFactory("Battle");
   const Battle = await BattleFactory.attach(addresses[network].battle); //{gasPrice: 80000000000}
-
-  // const BattleTokenFactory = await ethers.getContractFactory("BattleToken");
-  // const BattleToken = await BattleTokenFactory.attach(addresses[network].token); //{gasPrice: 80000000000}
-  //
-  // // log("current game:",await Battle.game());
-  //
-  // try {
-  //   let tx = await Battle.startGame();
-  //   await tx.wait();
-  // } catch (e) {
-  //   console.log(e);
-  //   col.red(" execution failed.");
-  //   process.exit();
-  // }
-  // col.green("    done.");
-  // log();
 
   const overrides = {
     value: FEE_ENTRY,

@@ -31,6 +31,8 @@ module.exports = {
     polygon: {
       url: `https://polygon-mainnet.g.alchemy.com/v2/${POLYGON_ALCHEMY_API_KEY}`,
       accounts: [`0x${POLYGON_PRIVATE_KEY}`],
+      gas: 3000000,
+      gasPrice: 50000000000,
     },
     ganache: {
       url: `HTTP://127.0.0.1:8545`,

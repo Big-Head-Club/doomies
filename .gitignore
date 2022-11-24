@@ -12,3 +12,5 @@ artifacts
 package-lock.json
 
 metadata
+
+contracts/scripts/addresses.csv
