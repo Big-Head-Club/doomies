@@ -9,7 +9,9 @@ import Battle from '../abi/Battle.json'
 import {debug} from '../utils/debug'
 
 // eslint-disable-next-line
-const FEE_ENTRY = 0.08
+// const FEE_ENTRY = 0.08
+// Free play
+const FEE_ENTRY = 0.00
 // eslint-disable-next-line
 const CONTRACT_PCT = 51
 
