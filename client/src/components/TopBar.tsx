@@ -50,7 +50,8 @@ export default function TopBar({onQuestion}: TopBarProps) {
               >
                 <div className='hidden md:ml-6 md:block'>
                   <div className='flex space-x-4'>
-                    <Pill text='total prize' data={totalPrizeStr}/>
+                    {/* Let UI reflect free to play game */}
+                    {/* <Pill text='total prize' data={totalPrizeStr}/> */}
                     <Pill text='time left' data={countdownStr}/>
                     <div className='w-40'>
                       <Connect/>
@@ -69,7 +70,8 @@ export default function TopBar({onQuestion}: TopBarProps) {
 
           <Disclosure.Panel className='md:hidden'>
             <div className='flex flex-col items-center gap-y-3 px-2 pt-2 pb-4'>
-              <Pill text='total prize' data={totalPrizeStr}/>
+              {/* Let UI reflect free to play game */}
+              {/* <Pill text='total prize' data={totalPrizeStr}/> */}
               <Pill text='time left' data={countdownStr}/>
               <div className='flex gap-x-2 w-4/5'>
                 <div className='w-4/5'>

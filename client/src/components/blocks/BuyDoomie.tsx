@@ -34,8 +34,9 @@ export default function BuyDoomieBlock({onClose}: BuyDoomieBlockProps) {
   }, [isSuccess])
 
   // @FIXME: Block title should say `mint a doomie` if doomies are available to mint
+  const blockTitle = "Let's Go!"
   return (
-    <Block title={isConnected ? 'buy a doomie' : 'buy a doomie'} onClose={onClose}>
+    <Block title={isConnected ? blockTitle : blockTitle} onClose={onClose}>
       {playerTokens?.available && (
         <div className='flex justify-center items-center'>
             You have {playerTokens.available.length} unspent {playerTokens.available.length === 1 ? 'doomie' : 'doomies'}.

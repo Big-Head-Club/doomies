@@ -6,7 +6,6 @@ import {PLAYER} from '../utils/constants'
 import {BATTLE_ADDRESS} from '../utils/env'
 import {totalPrize} from '../utils/prize'
 import Battle from '../abi/Battle.json'
-import {debug} from '../utils/debug'
 
 // eslint-disable-next-line
 // const FEE_ENTRY = 0.08
@@ -32,12 +31,12 @@ export const useTotalPrize = () => {
     ? Object.values(pieces).filter(p => p.pieceType === PLAYER)
     : undefined
 
-   useEffect(() => {
-     console.log('total prize', totalPrizeNum)
-     console.log('all players', allPlayers?.length)
-     console.log('entry fee', FEE_ENTRY)
-     console.log('contract pct', CONTRACT_PCT)
-   }, [totalPrizeNum, allPlayers, FEE_ENTRY])
+  //  useEffect(() => {
+  //    console.log('total prize', totalPrizeNum)
+  //    console.log('all players', allPlayers?.length)
+  //    console.log('entry fee', FEE_ENTRY)
+  //    console.log('contract pct', CONTRACT_PCT)
+  //  }, [totalPrizeNum, allPlayers, FEE_ENTRY])
   useEffect(() => {
     if (allPlayers == null) {
       return
