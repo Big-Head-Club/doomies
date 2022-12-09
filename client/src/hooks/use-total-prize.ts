@@ -31,10 +31,10 @@ export const useTotalPrize = () => {
     : undefined
 
    useEffect(() => {
-     debug('total prize', totalPrizeNum)
-     debug('all players', allPlayers?.length)
-     debug('entry fee', FEE_ENTRY)
-     debug('contract pct', CONTRACT_PCT)
+     console.log('total prize', totalPrizeNum)
+     console.log('all players', allPlayers?.length)
+     console.log('entry fee', FEE_ENTRY)
+     console.log('contract pct', CONTRACT_PCT)
    }, [totalPrizeNum, allPlayers, FEE_ENTRY])
   useEffect(() => {
     if (allPlayers == null) {
